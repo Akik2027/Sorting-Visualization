@@ -1,0 +1,393 @@
+/* 
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+} */
+/* Google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding:0;
+  
+  scroll-padding-top: 2rem;
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+  list-style-type: none;
+  text-decoration: none;
+  text-wrap: wrap;
+}
+.main{
+  overflow-x: hidden;
+}
+/*  The Header css  */
+header{
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* variables */
+:root{
+  --text-color: #161616 ;
+  --hover-color: #242424;
+  --bg-color: #fff;
+}
+#menu-icon{
+  font-size: 30px;
+  cursor:pointer;
+  display:none;
+}
+/* NAVBAR */
+.nav-container{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items:center;
+  justify-content: space-between;
+  padding:10px 0;
+  backdrop-filter: blur(10px);
+  background-color:var(--bg-color);
+ box-shadow: 0 5px 8px rgb(182, 177, 177);
+}
+.nav-container {
+  /* max-width: 1300px; */
+  width: 100%;
+  margin: auto;
+  padding: 10px 5%;
+}
+.con2{
+  display: grid;
+  grid-row: 50px;
+  align-items: center;
+  grid-column: 50px;
+}
+.con2_con1 p {
+  font-size: 2rem;
+  font-weight: 400;
+  color:darkcyan; 
+}
+.con2_con2{
+  display:flex;
+  align-items:normal;
+  justify-content: space-between;
+  padding:10px 0;
+  backdrop-filter: blur(10px);
+  background-color:var(--bg-color);
+  box-shadow: 0 5px 8px rgb(252, 248, 248);
+}
+.con1_part2 #a_generate{
+  font-size: 20px;
+  color: darkcyan;
+  border-color:rgb(72, 49, 218);
+  border-bottom:5px solid rgb(72, 49, 218) ;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: transparent;
+  /* border-radius: 10px; */
+  padding: 5px;
+  background-color: var(--bg-color);
+}
+.con1_part2 #a_generate:hover{
+color: rgb(225, 41, 41);
+border-bottom:5px solid rgb(234, 104, 104);
+}
+.algos{
+  display:grid;
+  grid-template-columns: repeat(6,auto);
+  text-wrap: wrap;
+  
+}
+.algos a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  /* background: linear-gradient(#000000, #aaaaaa); */
+  /* color: transparent; */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.algos a button{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color:darkcyan;
+  /* background: transparent ; */
+  /* -webkit-background-clip: text;
+  background-clip: text; */
+  /* border-radius: 5px; */
+  padding: 5px;
+  background-color: var(--bg-color);
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: 4px solid rgb(72, 49, 218);
+
+}
+.algos button:hover{
+  cursor: pointer;
+  color: rgb(75, 65, 216);
+}
+/* .algos a :hover{
+  color: red;
+} */
+/* 
+nav {
+  background-color: #3b3a3a;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 60%;
+     grid-template-columns: 30% 60%;
+      -webkit-column-gap: 10%;
+          column-gap: 10%;
+  padding: 0% 5%;
+} */
+
+/* nav .array-inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  place-content: center;
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_size {
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_speed {
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_generate {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 4% 0% 0% 0%;
+  padding-left: 20%;
+}
+
+nav .array-inputs #a_generate:hover {
+  cursor: pointer;
+}
+
+nav .header_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav .header_right .nav-heading {
+  display: inline-block;
+  font-size: xxx-large;
+  padding: 3% 0%;
+}
+
+nav .header_right .algos {
+ display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (16.66667%)[6];
+      grid-template-columns: repeat(6, 16.66667%);
+  place-content: center;
+column-gap: 5%;
+  padding: 2% 0%;
+}
+
+nav .header_right .algos button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5% 0%;
+  font-size: 20PX;
+}
+
+nav .header_right .algos button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_selected {
+  background-color: white;
+  color: green;
+}
+
+nav .header_right .algos .butt_selected:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_unselected:hover {
+  background-color: blue;
+  cursor: pointer;
+} */
+section{
+  padding:20px 0 20px;
+}
+section {
+  /* display: -ms-grid; */
+  display: grid;
+  /* -ms-grid-columns: 20% 60% 20%; */
+      grid-template-columns: 20% 60% 20%;
+}
+
+section .Complexity_Containers {
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions {
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions p {
+  display: inline;
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size: medium;
+  text-transform: none;
+}
+
+section #Info_Cont1 {
+  padding: 20% 10%;
+}
+
+section #Info_Cont1 h3 {
+  text-decoration: underline;
+}
+
+section #array_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 5%;
+  height: 70vh;
+}
+
+section #Info_Cont2 {
+  padding: 20% 10%;
+}
+
+section #Info_Cont2 h3 {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+/* @media (max-width: 768px){
+  nav .header_right .nav-heading  {
+    font-size: 25PX;
+  }
+  nav .header_right .algos button {
+    font-size: 15PX;
+  }
+  nav .array-inputs #a_size{
+    font-size: 10px;
+  }
+} */
+@media(max-width: 900px){
+  .con1_part1 {
+    font-size: 0.8rem;
+  }
+  .algos a {
+    display: block;
+    padding: 12px;}
+    .con2{
+      display: grid;
+      grid-row: auto;
+      
+    }
+    .con2_con2{
+      display: flex;
+      justify-content: space-around;
+    }
+
+.algos{
+  grid-row: auto;
+}
+.algos a button{
+  font-size: 0.8rem;
+}
+}
+@media(max-width: 768px){
+  #menu-icon{
+    display: initial;
+    z-index: 150;
+}
+  .navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0; 
+    background: var(--bg-color);
+    display: flex;
+     flex-direction: column;
+     text-align: center;
+    box-shadow: 0 5px 8px rgb(15 54 55 / 10%);
+    clip-path:circle(0% at 50% 0) ;
+    transition: 0.5s; 
+}
+.algos a {
+    display: block;
+    padding: 12px;
+}
+.navbar.active{
+    clip-path: circle(144% at 50% 0);
+}
+.algos{
+  grid-row: auto;
+}
+.algos a button{
+  font-size: 0.5rem;
+}
+}
+/* @media (max-width: 480px)
+{
+
+} */
+
+/* @media (min-width: 481px)    
+{
+  nav .header_right .nav-heading  {
+    font-size: 15PX;
+  }
+  nav .header_right .algos button {
+    font-size: 10PX;
+      }
+
+} */
+/*
+@media (min-width: 1251px)//Laptops and up
+{
+
+}
+*/
+/*
+    *****************
+    DONE BY:-   TUMMALA KETHAN
+    *****************
+*/
+/*# sourceMappingURL=style.css.map */
